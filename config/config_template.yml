@@ -1,0 +1,60 @@
+exchange:
+  primary_smtp_address: { primary_smtp_address }
+  autodiscover: false
+  access_type: DELEGATE
+  server: { server }
+  # refer to README on how to obtain a valid certificate
+  certificate_path: { certificate_path }
+  credentials:
+    username: { username }
+    password: { password }
+  destination_email: { destination_email }
+  send_attachments: false
+
+# https://www.inbucket.org/ Inbucket is an email testing application;
+# it will accept messages for any email address and make them available to view via a web interface.
+inbucket:
+  hostname: { hostname }
+  port: { port }
+  api_url: { hostname:9000/api/v1 }
+  send_attachments: false
+
+symantec:
+  report_id: { report_id }
+  sdlp_wsdl: { sdlp_wsdl }
+  sdlp_host: { sdlp_host }
+  sdlp_username: { sdlp_username }
+  sdlp_password: { sdlp_password }
+
+prometheus:
+  pushgateway_url: { pushgateway_url }
+  username: { username }
+  password: { password }
+  http_proxy: { proxy }
+  https_proxy: { proxy }
+
+databases:
+  mssql:
+    server: { hostname }
+    database: { db_name }
+    credentials:
+      username: { username }
+      password: { password }
+  oracle:
+    dsn: { dsn }
+    credentials:
+      username: { username }
+      password: { password }
+
+splunk:
+  REQUESTS_VERIFY_CERTIFICATE_SPLUNK: False
+  SPLUNK_USER_NAME: ""
+  SPLUNK_PASSWORD: ""
+  SPLUNK_JOB_SERVICE_URL: "/servicesNS/SA-SPLK-TechUsrImars/UI-SCS-imars/search/jobs"
+  SPLUNK_BASE_URL: "https://10.144.20.170:8089"
+
+# some website with a login form
+website:
+  username: { username }
+  password: { password }
+  imcs_url: 'https://mywebsite.com/login'

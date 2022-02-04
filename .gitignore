@@ -1,0 +1,6 @@
+.idea
+__pycache__/
+allure_reports/
+/allure-report/
+/data/certificates/
+config.yml
